@@ -1,0 +1,3 @@
+defmodule UseElixirThrift do
+
+end
