@@ -5,5 +5,5 @@
 %%
 
 
--include("example_types.hrl").
+-include("my_chat_types.hrl").
 

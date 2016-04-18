@@ -1,3 +1,3 @@
-defmodule MyChatMessage do
-    use Riffed.Struct, example_types: [:MyChatMessage]
+defmodule UseElixirThrift.MyChatMessage do
+    use Riffed.Struct, my_chat_types: [:MyChatMessage]
 end

@@ -4,9 +4,9 @@
 %% DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
 %%
 
--module(example_types).
+-module(my_chat_types).
 
--include("example_types.hrl").
+-include("my_chat_types.hrl").
 
 -export([struct_info/1, struct_info_ext/1]).
 
@@ -25,3 +25,4 @@ struct_info_ext('MyChatMessage') ->
 ;
 
 struct_info_ext(_) -> erlang:error(function_clause).
+

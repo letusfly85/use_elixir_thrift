@@ -1,9 +1,10 @@
-defmodule ExampleServer do
+defmodule UseElixirThrift.MyChatServer do
   use Riffed.Server,
+  auto_import_structs: false,
   service: :my_chat_service_thrift,
-  structs: Data,
-  functions: [sendMessage: &ThriftHandlers.send_message/1,
-              recieveMessage: &ThriftHandlers.recieve_message/1
+  structs: UseElixirThrift.MyChatMessage,
+  functions: [sendMessage:    &UseElixirThrift.MyChatHandler.send_message/3,
+              recieveMessage: &UseElixirThrift.MyChatHandler.recieve_message/3
   ],
   server: {:thrift_socket_server,
            port: 2112,

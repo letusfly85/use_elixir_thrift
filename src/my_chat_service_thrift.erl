@@ -14,18 +14,22 @@
 
 struct_info(_) -> erlang:error(function_clause).
 %%% interface
-% sendMessage(This, Message)
+% sendMessage(This, SenderId, RecieverId, Message)
 function_info('sendMessage', params_type) ->
-  {struct, [{1, {struct, {'example_types', 'MyChatMessage'}}}]}
+  {struct, [{1, i32},
+          {2, i32},
+          {3, string}]}
 ;
 function_info('sendMessage', reply_type) ->
   {struct, []};
 function_info('sendMessage', exceptions) ->
   {struct, []}
 ;
-% recieveMessage(This, Message)
+% recieveMessage(This, SenderId, RecieverId, Message)
 function_info('recieveMessage', params_type) ->
-  {struct, [{1, {struct, {'example_types', 'MyChatMessage'}}}]}
+  {struct, [{1, i32},
+          {2, i32},
+          {3, string}]}
 ;
 function_info('recieveMessage', reply_type) ->
   {struct, []};

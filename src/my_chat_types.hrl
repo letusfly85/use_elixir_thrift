@@ -1,5 +1,5 @@
--ifndef(_example_types_included).
--define(_example_types_included, yeah).
+-ifndef(_my_chat_types_included).
+-define(_my_chat_types_included, yeah).
 
 %% struct 'MyChatMessage'
 
